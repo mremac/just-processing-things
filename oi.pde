@@ -1,4 +1,3 @@
-
 import processing.pdf.*;
 import java.util.Calendar;
 
@@ -61,6 +60,10 @@ void setup(){
 
 
 void draw(){
+
+  // Getter
+  clicked = $( "#slider" ).slider( "option", "value" ) *wide/100;
+
   // background(255);
   // stroke(255, 130, 130);
   noStroke();
@@ -153,41 +156,20 @@ if(count >= kicktime){
 
   noFill();
 
-  dial();
-}
+  }
 
 
 void mousePressed() {
-    if (mouseX <= dx || mouseX >= wide - dx || mouseY <= ey - 0.01*wide || mouseY >= ey + 0.01*wide){
-    ex = sx*mouseX + dx;
-    clicked = mouseX;
-  }
-  if(mouseY >= ey - 0.01*wide && mouseY <= ey + 0.01*wide){
-    ex = mouseX;
-    clicked = mouseX*sx;
-    if(mouseX <= dx){
-      ex = dx;
-    } else if(mouseX >= wide - dx){
-      ex = wide - dx;
-    }
-  }
+ 
+   // Setter
+   $( "#slider" ).slider( "option", "value", mouseX *100/wide);
 }
 
-void mouseDragged() {
-  if (mouseX <= dx || mouseX >= wide - dx || mouseY <= ey - 0.01*wide || mouseY >= ey + 0.01*wide){
-    ex = sx*mouseX + dx;
-    clicked = mouseX;
-  }
-  if(mouseY >= ey - 0.01*wide && mouseY <= ey + 0.01*wide){
-    ex = mouseX;
-    clicked = mouseX*sx;
-    if(mouseX <= dx){
-      ex = dx;
-    } else if(mouseX >= wide - dx){
-      ex = wide - dx;
-    }
-  }
-}
+void mouseDragged() { 
+
+   // Setter
+   $( "#slider" ).slider( "option", "value", mouseX *100/wide);
+ }
 
 void dial(){
   fill(255);

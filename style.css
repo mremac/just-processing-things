@@ -26,3 +26,15 @@ body{
   width: 100vw;
   height: 100vh;
 }
+
+#slider{
+  z-index: 4;
+  position: fixed;
+  top: 95vh;
+  left: 5vw;
+  width: 90vw;
+  height: 2vh;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 2px black;
+  
+}

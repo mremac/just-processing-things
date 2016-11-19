@@ -4,6 +4,15 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#slider" ).slider();
+  } );
+  </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="menu.js"></script>
@@ -18,5 +27,6 @@
 <body>
     <canvas id="canvas" name="oi" data-processing-sources="oi.pde"></canvas>
     <button class="btn" onclick="nextSketch();">NEXT</button>
+<div id="slider"></div>
 </body>
 </html>
